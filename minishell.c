@@ -1,6 +1,19 @@
-#include <stdio.h>
+#include <unistd.h>
 
-int	main (void)
+void	ft_putstr(char *str)
 {
-	printf ("Hola Mundo!");
+	while (*str)
+	{
+		write(1, str, 1);
+		str++;
+	}
 }
+/*
+int	main(void)
+{
+	char	*str;
+	char	a[7] = "Aprob";
+    // Llamamos a ft_putstr para imprimir la cadena
+	ft_putstr(a);
+	return (0);
+}*/
